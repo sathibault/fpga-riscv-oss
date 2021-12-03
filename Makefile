@@ -186,4 +186,7 @@ clean:
 		testbench_rvf.vvp testbench_wb.vvp testbench.vcd testbench.trace \
 		testbench_verilator testbench_verilator_dir
 
-.PHONY: test test_vcd test_sp test_axi test_wb test_wb_vcd test_ez test_ez_vcd test_synth download-tools build-tools toc clean
+clean-cache:
+	$(foreach REPO,riscv-gnu-toolchain riscv-binutils-gdb riscv-gcc riscv-glibc riscv-newlib, rm -rf /var/cache/distfiles/$(REPO).*)
+
+.PHONY: test test_vcd test_sp test_axi test_wb test_wb_vcd test_ez test_ez_vcd test_synth download-tools build-tools toc clean clean-cache
