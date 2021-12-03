@@ -8,5 +8,6 @@ COPY Makefile /opt/picorv32/Makefile
 
 WORKDIR /opt/picorv32
 RUN make download-tools
-RUN echo YES | make build-riscv32ec-tools
-RUN make clean
+# clean must be in same command to reduce layer size
+RUN echo YES | make build-riscv32ec-tools; \
+    make clean
