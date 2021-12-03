@@ -178,7 +178,8 @@ toc:
 
 clean:
 	rm -rf riscv-gnu-toolchain-riscv32i riscv-gnu-toolchain-riscv32ic \
-		riscv-gnu-toolchain-riscv32im riscv-gnu-toolchain-riscv32imc
+		riscv-gnu-toolchain-riscv32im riscv-gnu-toolchain-riscv32imc \
+		riscv-gnu-toolchain-riscv32ec
 	rm -vrf $(FIRMWARE_OBJS) $(TEST_OBJS) check.smt2 check.vcd synth.v synth.log \
 		firmware/firmware.elf firmware/firmware.bin firmware/firmware.hex firmware/firmware.map \
 		testbench.vvp testbench_sp.vvp testbench_synth.vvp testbench_ez.vvp \
